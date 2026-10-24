@@ -35,10 +35,15 @@ public partial class ProductCardUserControl : UserControl
     {
         if (!string.IsNullOrWhiteSpace(imageName))
         {
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", imageName);
+            string fileName = Path.GetFileName(imageName);
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", fileName);
+
             if (File.Exists(path))
             {
-                picImage.Image = Image.FromFile(path);
+                using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    picImage.Image = Image.FromStream(stream);
+                }
                 return;
             }
         }
