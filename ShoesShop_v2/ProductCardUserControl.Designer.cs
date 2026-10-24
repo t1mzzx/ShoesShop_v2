@@ -49,29 +49,27 @@
             // 
             // lblTitle
             // 
-            lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             lblTitle.Location = new Point(140, 10);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(208, 18);
+            lblTitle.Size = new Size(593, 18);
             lblTitle.TabIndex = 1;
             lblTitle.Text = "Производство | Наименование";
+            lblTitle.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblCategory
             // 
-            lblCategory.AutoSize = true;
             lblCategory.Location = new Point(140, 40);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(70, 15);
+            lblCategory.Size = new Size(458, 15);
             lblCategory.TabIndex = 2;
             lblCategory.Text = "Категория: ";
             // 
             // lblQuantity
             // 
-            lblQuantity.AutoSize = true;
             lblQuantity.Location = new Point(140, 65);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(77, 15);
+            lblQuantity.Size = new Size(458, 15);
             lblQuantity.TabIndex = 3;
             lblQuantity.Text = "Количество: ";
             // 
@@ -79,19 +77,18 @@
             // 
             lblComposition.Location = new Point(140, 90);
             lblComposition.Name = "lblComposition";
-            lblComposition.Size = new Size(420, 40);
+            lblComposition.Size = new Size(458, 40);
             lblComposition.TabIndex = 4;
             lblComposition.Text = "Состав: ";
             // 
             // lblPrice
             // 
             lblPrice.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lblPrice.Location = new Point(580, 20);
+            lblPrice.Location = new Point(613, 40);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(150, 40);
+            lblPrice.Size = new Size(120, 90);
             lblPrice.TabIndex = 5;
             lblPrice.Text = "0,00 ₽";
-            lblPrice.TextAlign = ContentAlignment.MiddleRight;
             // 
             // ProductCardUserControl
             // 
@@ -110,7 +107,6 @@
             Size = new Size(748, 138);
             ((System.ComponentModel.ISupportInitialize)picImage).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
